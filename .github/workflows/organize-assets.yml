@@ -1,0 +1,25 @@
+name: Organize assets
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sort new files into categories
+        run: bash scripts/organize-assets.sh
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "assets-organizer[bot]"
+            git config user.email "actions@github.com"
+            git add -A
+            git commit -m "chore: organize new assets by category"
+            git push
+          fi
