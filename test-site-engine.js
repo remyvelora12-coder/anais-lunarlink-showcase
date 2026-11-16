@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const {scoreSite,rankSites}=require('./site-engine.js');
+const s=(slope,roughness,illumination,comms)=>({slope,roughness,illumination,comms});
+assert.equal(scoreSite(s(0,0,100,100)).score,100);
+assert.equal(scoreSite(s(15,100,0,0)).score,0);
+assert.equal(scoreSite(s(12,0,100,100)).grade,'REVIEW');
+assert.ok(scoreSite(s(2,10,90,90)).score>scoreSite(s(8,50,40,40)).score);
+assert.equal(rankSites([s(8,50,40,40),s(2,10,90,90)])[0].score,scoreSite(s(2,10,90,90)).score);
+assert.throws(()=>scoreSite(s(-1,0,100,100)),/range/);
+assert.throws(()=>scoreSite(s(0,NaN,100,100)),/Invalid/);
+console.log('PASS: 7 deterministic site-analysis tests');

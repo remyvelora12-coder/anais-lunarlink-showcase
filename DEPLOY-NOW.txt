@@ -1,0 +1,21 @@
+ANAIS LunarLink™ — NASA Space Apps 2026 — WEB-003
+
+QUICK RELEASE (GitHub Pages — no build required)
+1. Create a new PUBLIC GitHub repository (example: anais-lunarlink-showcase).
+2. Upload all contents of THIS folder into the repository root. Important: index.html must be at repository root, not nested in a folder.
+3. Open GitHub Settings > Pages > Build and deployment > Source: Deploy from a branch > Branch: main > Folder: /(root) > Save.
+4. Open the Pages URL shown by GitHub when deployment completes. Open it in a private browser window and check: homepage images; video playback; Start Descent; Site Analyzer candidate buttons; sliders; self-check; Export JSON.
+5. Paste the PUBLIC site URL and SOURCE repository URL into the NASA Space Apps submission.
+
+ALTERNATIVE: Vercel — connect the repository as a new project. Framework Preset: Other; Root Directory: ./; build command: none. Deploy and verify the resulting public URL.
+
+SUBMISSION DESCRIPTION (accurate status)
+ANAIS LunarLink™ is a conceptual lunar-mission digital twin showcase with a browser-based synthetic descent visualization and an executable, transparent landing-site suitability prototype. Visitors compare three synthetic sites, change terrain slope, roughness, illumination, and communications coverage, view risk flags, and export calculated JSON. Model scores are illustrative, not scientifically validated, and are not operational landing guidance. Concept images and videos illustrate future system architecture. The browser analyzer has not been verified against the separate LunarNav source repository.
+
+CHECKED LOCALLY: 7 Node scoring tests and syntax checks for app.js, site-engine.js, technical-demo.js; HTML references and local assets audited. Full browser and public URL deployment are not yet verified.
+
+Property of Aegis Air Intelligence Systems LLC & ANAIS Technology LLC
+Prepared under the direction of Edward Guillen Morejon, Founder & CEO
+© 2025 Aegis Air Intelligence Systems LLC & ANAIS Technology LLC. All Rights Reserved.
+Controlled Distribution • Access Logged • Unauthorized Disclosure Prohibited
+(Ownership notice only. No access log implemented.)
